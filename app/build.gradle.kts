@@ -1,3 +1,7 @@
+@file:Suppress("UnstableApiUsage")
+
+import com.android.build.api.dsl.ManagedVirtualDevice
+
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.dagger.hilt.android)
@@ -37,6 +41,7 @@ android {
       )
     }
   }
+
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
@@ -59,6 +64,18 @@ android {
   packaging {
     resources {
       excludes += "/META-INF/{AL2.0,LGPL2.1}"
+    }
+  }
+
+  testOptions {
+    managedDevices {
+      devices {
+        maybeCreate<ManagedVirtualDevice>("pixel7Api33").apply {
+          device = "Pixel 7"
+          apiLevel = 33
+          systemImageSource = "google"
+        }
+      }
     }
   }
 }
