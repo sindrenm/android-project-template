@@ -9,6 +9,26 @@ on:
     types: [ opened, synchronize, reopened, ready_for_review ]
 
 jobs:
+  lint-android:
+    if: github.event.pull_request.draft == false
+    name: Lint Android
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: zulu
+          java-version: 17
+
+      - uses: android-actions/setup-android@v2
+
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: lint
+
   lint-kotlin:
     if: github.event.pull_request.draft == false
     name: Lint Kotlin
