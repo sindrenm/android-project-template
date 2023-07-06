@@ -16,16 +16,20 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-java@v3
+      - name: Set up Java environment
+        uses: actions/setup-java@v3
         with:
           distribution: zulu
           java-version: 17
 
-      - uses: android-actions/setup-android@v2
+      - name: Set up Android environment
+        uses: android-actions/setup-android@v2
 
-      - uses: gradle/gradle-build-action@v2
+      - name: Lint Android source
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: lintDebug
 
@@ -36,33 +40,64 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-java@v3
+      - name: Set up Java environment
+        uses: actions/setup-java@v3
         with:
           distribution: zulu
           java-version: 17
 
-      - uses: gradle/gradle-build-action@v2
+      - name: Lint Kotlin code
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: lintKotlin
 
-  test-android:
+  unit-tests:
     if: github.event.pull_request.draft == false
-    name: Test Android
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java environment
+        uses: actions/setup-java@v3
+        with:
+          distribution: zulu
+          java-version: 17
+
+      - name: Set up Android environment
+        uses: android-actions/setup-android@v2
+
+      - name: Run unit tests
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: testDebugUnitTest
+
+  android-tests:
+    if: github.event.pull_request.draft == false
+    name: Android Tests
     runs-on: macos-latest
     timeout-minutes: 30
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-java@v3
+      - name: Set up Java environment
+        uses: actions/setup-java@v3
         with:
           distribution: zulu
           java-version: 17
 
-      - uses: android-actions/setup-android@v2
+      - name: Set up Android environment
+        uses: android-actions/setup-android@v2
 
-      - uses: gradle/gradle-build-action@v2
+      - name: Run Android tests (Pixel 7 API 33)
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: pixel7Api33DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
