@@ -120,4 +120,6 @@ dependencies {
   kapt(libs.dagger.hilt.compiler)
 
   ksp(libs.arrow.optics.ksp)
+
+  testImplementation(libs.kotlin.test)
 }
