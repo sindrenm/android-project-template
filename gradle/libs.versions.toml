@@ -1,5 +1,5 @@
 [versions]
-android-gradle-plugin = "8.2.0-alpha16"
+android-gradle-plugin = "8.2.0-beta01"
 androidx-activity = "1.8.0-alpha07"
 androidx-compose-compiler = "1.5.2"
 androidx-hilt = "1.0.0"
