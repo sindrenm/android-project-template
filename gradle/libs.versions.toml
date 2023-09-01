@@ -1,14 +1,14 @@
 [versions]
 android-gradle-plugin = "8.3.0-alpha01"
 androidx-activity = "1.8.0-alpha07"
-androidx-compose-compiler = "1.5.2"
+androidx-compose-compiler = "1.5.3"
 androidx-hilt = "1.0.0"
 androidx-lifecycle = "2.6.1"
 androidx-navigation = "2.7.1"
 arrow = "1.2.0"
 dagger = "2.48"
 dagger-auto = "0.9.0"
-kotlin = "1.9.0"
+kotlin = "1.9.10"
 kotlinx-coroutines = "1.7.3"
 
 [plugins]
