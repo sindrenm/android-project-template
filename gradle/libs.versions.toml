@@ -51,6 +51,6 @@ dagger-auto-android = { module = "se.ansman.dagger.auto:android", version.ref = 
 dagger-auto-compiler = { module = "se.ansman.dagger.auto:compiler", version.ref = "dagger-auto" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger" }
 dagger-hilt-runtime = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
-google-material = "com.google.android.material:material:1.9.0"
+google-material = "com.google.android.material:material:1.10.0"
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
