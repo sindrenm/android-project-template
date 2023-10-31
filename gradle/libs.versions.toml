@@ -46,7 +46,7 @@ androidx-navigation-compose = { module = "androidx.navigation:navigation-compose
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
 arrow-optics-ksp = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
-coil-compose = "io.coil-kt:coil-compose:2.4.0"
+coil-compose = "io.coil-kt:coil-compose:2.5.0"
 dagger-auto-android = { module = "se.ansman.dagger.auto:android", version.ref = "dagger-auto" }
 dagger-auto-compiler = { module = "se.ansman.dagger.auto:compiler", version.ref = "dagger-auto" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger" }
