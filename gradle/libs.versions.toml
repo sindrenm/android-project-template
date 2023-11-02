@@ -21,7 +21,7 @@ kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "1.9.10-1.0.13"
 kotlinter = { id = "org.jmailen.kotlinter", version = "3.16.0" }
 
 [libraries]
-android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.0.3"
+android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.0.4"
 androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-compose-animation = { module = "androidx.compose.animation:animation" }
