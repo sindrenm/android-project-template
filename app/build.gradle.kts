@@ -6,7 +6,6 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.dagger.hilt.android)
   alias(libs.plugins.kotlin.android)
-  alias(libs.plugins.kotlin.kapt)
   alias(libs.plugins.kotlin.ksp)
   alias(libs.plugins.kotlinter)
 }
@@ -83,13 +82,10 @@ android {
 dependencies {
   androidTestImplementation(libs.androidx.compose.ui.test.junit4)
   androidTestImplementation(platform(libs.androidx.compose.bom))
-
   coreLibraryDesugaring(libs.android.desugarJdkLibs)
-
   debugImplementation(libs.androidx.compose.ui.test.manifest)
   debugImplementation(libs.androidx.compose.ui.tooling)
   debugImplementation(platform(libs.androidx.compose.bom))
-
   implementation(libs.androidx.activity)
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.compose.animation)
@@ -113,13 +109,10 @@ dependencies {
   implementation(libs.google.material)
   implementation(libs.kotlinx.coroutines.core)
   implementation(platform(libs.androidx.compose.bom))
-
-  kapt(libs.androidx.compose.compiler)
-  kapt(libs.androidx.hilt.compiler)
-  kapt(libs.dagger.auto.compiler)
-  kapt(libs.dagger.hilt.compiler)
-
+  ksp(libs.androidx.compose.compiler)
+  ksp(libs.androidx.hilt.compiler)
   ksp(libs.arrow.optics.ksp)
-
+  ksp(libs.dagger.auto.compiler)
+  ksp(libs.dagger.hilt.compiler)
   testImplementation(libs.kotlin.test)
 }
