@@ -17,7 +17,7 @@ android-library = { id = "com.android.library", version.ref = "android-gradle-pl
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
-kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "1.9.22-1.0.16" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "1.9.21-1.0.16" }
 kotlinter = { id = "org.jmailen.kotlinter", version = "4.1.1" }
 
 [libraries]
@@ -25,7 +25,7 @@ android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.0.4"
 androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-compose-animation = { module = "androidx.compose.animation:animation" }
-androidx-compose-bom = "dev.chrisbanes.compose:compose-bom:2023.04.00-beta02"
+androidx-compose-bom = "dev.chrisbanes.compose:compose-bom:2023.12.00-alpha04"
 androidx-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "androidx-compose-compiler" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
 androidx-compose-material-icons = { module = "androidx.compose.material:material-icons-core" }
