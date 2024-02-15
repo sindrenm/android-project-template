@@ -9,7 +9,7 @@ arrow = "1.2.1"
 dagger = "2.50"
 dagger-auto = "1.0.0"
 kotlin = "1.9.22"
-kotlinx-coroutines = "1.7.3"
+kotlinx-coroutines = "1.8.0"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
