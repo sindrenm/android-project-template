@@ -16,7 +16,7 @@ android-application = { id = "com.android.application", version.ref = "android-g
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "1.9.22-1.0.18" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "1.9.23-1.0.19" }
 kotlinter = { id = "org.jmailen.kotlinter", version = "4.2.0" }
 
 [libraries]
