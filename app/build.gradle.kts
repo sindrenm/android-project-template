@@ -67,13 +67,11 @@ android {
   }
 
   testOptions {
-    managedDevices {
-      devices {
-        maybeCreate<ManagedVirtualDevice>("pixel7Api33").apply {
-          device = "Pixel 7"
-          apiLevel = 33
-          systemImageSource = "google"
-        }
+    managedDevices.localDevices {
+      create("pixel7Api33") {
+        device = "Pixel 7"
+        apiLevel = 33
+        systemImageSource = "google"
       }
     }
   }
