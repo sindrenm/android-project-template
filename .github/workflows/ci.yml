@@ -97,7 +97,7 @@ jobs:
       - name: Set up Android environment
         uses: android-actions/setup-android@v3
 
-      - name: Run Android tests (Pixel 7 API 33)
+      - name: Run Android tests (Pixel 8 API 34)
         uses: gradle/gradle-build-action@v3
         with:
-          arguments: pixel7Api33DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
+          arguments: pixel8Api34DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect

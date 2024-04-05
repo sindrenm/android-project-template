@@ -68,9 +68,9 @@ android {
 
   testOptions {
     managedDevices.localDevices {
-      create("pixel7Api33") {
-        device = "Pixel 7"
-        apiLevel = 33
+      create("pixel8Api34") {
+        device = "Pixel 8"
+        apiLevel = 34
         systemImageSource = "google"
       }
     }
