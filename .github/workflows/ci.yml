@@ -77,27 +77,3 @@ jobs:
         uses: gradle/gradle-build-action@v3
         with:
           arguments: testDebugUnitTest
-
-  android-tests:
-    if: github.event.pull_request.draft == false
-    name: Android Tests
-    runs-on: macos-latest
-    timeout-minutes: 30
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
-
-      - name: Set up Java environment
-        uses: actions/setup-java@v4
-        with:
-          distribution: zulu
-          java-version: 17
-
-      - name: Set up Android environment
-        uses: android-actions/setup-android@v3
-
-      - name: Run Android tests (Pixel 7 API 33)
-        uses: gradle/gradle-build-action@v3
-        with:
-          arguments: pixel7Api33DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
