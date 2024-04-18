@@ -65,23 +65,9 @@ android {
       excludes += "/META-INF/{AL2.0,LGPL2.1}"
     }
   }
-
-  testOptions {
-    managedDevices {
-      devices {
-        maybeCreate<ManagedVirtualDevice>("pixel7Api33").apply {
-          device = "Pixel 7"
-          apiLevel = 33
-          systemImageSource = "google"
-        }
-      }
-    }
-  }
 }
 
 dependencies {
-  androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-  androidTestImplementation(platform(libs.androidx.compose.bom))
   coreLibraryDesugaring(libs.android.desugarJdkLibs)
   debugImplementation(libs.androidx.compose.ui.test.manifest)
   debugImplementation(libs.androidx.compose.ui.tooling)
