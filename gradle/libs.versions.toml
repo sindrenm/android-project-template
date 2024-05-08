@@ -7,7 +7,7 @@ androidx-lifecycle = "2.7.0"
 androidx-navigation = "2.7.7"
 arrow = "1.2.4"
 dagger = "2.51.1"
-dagger-auto = "1.1.0"
+dagger-auto = "1.2.0"
 kotlin = "1.9.23"
 kotlinx-coroutines = "1.8.0"
 
