@@ -1,14 +1,14 @@
 [versions]
 android-gradle-plugin = "8.4.0"
 androidx-activity = "1.9.0"
-androidx-compose-compiler = "1.5.13"
+androidx-compose-compiler = "1.5.14"
 androidx-hilt = "1.2.0"
 androidx-lifecycle = "2.8.0"
 androidx-navigation = "2.7.7"
 arrow = "1.2.4"
 dagger = "2.51.1"
 dagger-auto = "1.2.1"
-kotlin = "1.9.23"
+kotlin = "1.9.24"
 kotlinx-coroutines = "1.8.1"
 
 [plugins]
@@ -16,7 +16,7 @@ android-application = { id = "com.android.application", version.ref = "android-g
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "1.9.23-1.0.20" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "1.9.24-1.0.20" }
 kotlinter = { id = "org.jmailen.kotlinter", version = "4.3.0" }
 
 [libraries]
