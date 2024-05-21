@@ -8,7 +8,7 @@ androidx-navigation = "2.7.7"
 arrow = "1.2.4"
 dagger = "2.51.1"
 dagger-auto = "1.2.1"
-kotlin = "1.9.24"
+kotlin = "2.0.0"
 kotlinx-coroutines = "1.8.1"
 
 [plugins]
