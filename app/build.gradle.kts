@@ -1,10 +1,9 @@
 @file:Suppress("UnstableApiUsage")
 
-import com.android.build.api.dsl.ManagedVirtualDevice
-
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.dagger.hilt.android)
+  alias(libs.plugins.kotlin.compose)
   alias(libs.plugins.kotlin.android)
   alias(libs.plugins.kotlin.ksp)
   alias(libs.plugins.kotlinter)
@@ -12,13 +11,13 @@ plugins {
 
 android {
   namespace = "com.sindrenm.templates.project"
-  compileSdk = 34
+  compileSdk = 35
 
   defaultConfig {
     applicationId = "com.sindrenm.templates.project"
 
     minSdk = 24
-    targetSdk = 34
+    targetSdk = 35
 
     versionCode = 1
     versionName = "0.1.0"
@@ -50,14 +49,6 @@ android {
 
   kotlinOptions {
     jvmTarget = "17"
-  }
-
-  buildFeatures {
-    compose = true
-  }
-
-  composeOptions {
-    kotlinCompilerExtensionVersion = libs.versions.androidx.compose.compiler.get()
   }
 
   packaging {
@@ -95,7 +86,6 @@ dependencies {
   implementation(libs.google.material)
   implementation(libs.kotlinx.coroutines.core)
   implementation(platform(libs.androidx.compose.bom))
-  ksp(libs.androidx.compose.compiler)
   ksp(libs.androidx.hilt.compiler)
   ksp(libs.arrow.optics.ksp)
   ksp(libs.dagger.auto.compiler)
