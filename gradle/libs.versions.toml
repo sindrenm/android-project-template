@@ -1,6 +1,6 @@
 [versions]
 android-gradle-plugin = "8.6.0"
-androidx-activity = "1.9.1"
+androidx-activity = "1.9.2"
 androidx-hilt = "1.2.0"
 androidx-lifecycle = "2.8.4"
 androidx-navigation = "2.7.7"
