@@ -2,7 +2,7 @@
 android-gradle-plugin = "8.6.0"
 androidx-activity = "1.9.1"
 androidx-hilt = "1.2.0"
-androidx-lifecycle = "2.8.4"
+androidx-lifecycle = "2.8.5"
 androidx-navigation = "2.7.7"
 arrow = "1.2.4"
 dagger = "2.52"
