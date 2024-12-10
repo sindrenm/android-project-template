@@ -17,7 +17,6 @@ dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "da
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "2.0.21-1.0.28" }
-kotlinter = { id = "org.jmailen.kotlinter", version = "4.5.0" }
 
 [libraries]
 android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.1.3"
