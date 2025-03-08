@@ -1,4 +1,4 @@
-package com.sindrenm.templates.project.theme
+package com.sindrenm.templates.project.core.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

@@ -2,6 +2,8 @@
 
 import org.gradle.api.initialization.resolve.RepositoriesMode.FAIL_ON_PROJECT_REPOS
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
   repositories {
     google()
@@ -22,3 +24,4 @@ dependencyResolutionManagement {
 rootProject.name = "Template"
 
 include(":app")
+include(":core:theme")
