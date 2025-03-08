@@ -9,6 +9,7 @@ dependencies {
   implementation(pluginCoordinates(libs.plugins.android.library))
   implementation(pluginCoordinates(libs.plugins.kotlin.android))
   implementation(pluginCoordinates(libs.plugins.kotlin.compose))
+  implementation(pluginCoordinates(libs.plugins.kotlin.jvm))
 
   // https://github.com/gradle/gradle/issues/15383#issuecomment-779893192
   implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))

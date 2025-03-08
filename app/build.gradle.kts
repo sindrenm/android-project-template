@@ -39,6 +39,7 @@ dependencies {
   implementation(libs.dagger.hilt.runtime)
   implementation(libs.kotlinx.coroutines.core)
   implementation(platform(libs.androidx.compose.bom))
+  implementation(projects.core.data)
   implementation(projects.core.theme)
   ksp(libs.androidx.hilt.compiler)
   ksp(libs.arrow.optics.ksp)
