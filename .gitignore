@@ -1,7 +1,6 @@
+.gradle/
+.idea/
+.kotlin/
 build/
+captures/
 local.properties
-
-/.gradle/
-/.idea/
-/.kotlin/
-/captures/

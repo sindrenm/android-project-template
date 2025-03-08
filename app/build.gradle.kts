@@ -1,54 +1,14 @@
 plugins {
-  alias(libs.plugins.android.application)
+  alias(libs.plugins.convention.application)
   alias(libs.plugins.dagger.hilt.android)
-  alias(libs.plugins.kotlin.compose)
-  alias(libs.plugins.kotlin.android)
   alias(libs.plugins.kotlin.ksp)
-}
-
-kotlin {
-  jvmToolchain(21)
 }
 
 android {
   namespace = "com.sindrenm.templates.project"
-  compileSdk = 35
 
   defaultConfig {
     applicationId = "com.sindrenm.templates.project"
-
-    minSdk = 26
-    targetSdk = 35
-
-    versionCode = 1
-    versionName = "0.1.0"
-
-    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-    vectorDrawables {
-      useSupportLibrary = true
-    }
-  }
-
-  buildTypes {
-    release {
-      isMinifyEnabled = false
-
-      proguardFiles(
-        getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro",
-      )
-    }
-  }
-
-  compileOptions {
-    isCoreLibraryDesugaringEnabled = true
-  }
-
-  packaging {
-    resources {
-      excludes += "/META-INF/{AL2.0,LGPL2.1}"
-    }
   }
 }
 

@@ -1,20 +1,9 @@
 plugins {
-  alias(libs.plugins.android.library)
-  alias(libs.plugins.kotlin.compose)
-  alias(libs.plugins.kotlin.android)
-}
-
-kotlin {
-  jvmToolchain(21)
+  alias(libs.plugins.convention.library.android)
 }
 
 android {
   namespace = "com.sindrenm.templates.project.core.theme"
-  compileSdk = 35
-
-  defaultConfig {
-    minSdk = 26
-  }
 }
 
 dependencies {
