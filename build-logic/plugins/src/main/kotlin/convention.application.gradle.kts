@@ -27,8 +27,4 @@ android {
       )
     }
   }
-
-  compileOptions {
-    isCoreLibraryDesugaringEnabled = true
-  }
 }

@@ -10,6 +10,10 @@ android {
   defaultConfig {
     applicationId = "com.sindrenm.templates.project"
   }
+
+  compileOptions {
+    isCoreLibraryDesugaringEnabled = true
+  }
 }
 
 dependencies {
