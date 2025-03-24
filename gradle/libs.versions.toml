@@ -7,7 +7,7 @@ androidx-navigation = "2.8.9"
 arrow = "2.0.1"
 dagger = "2.56"
 dagger-auto = "1.5.0"
-kotlin = "2.1.10"
+kotlin = "2.1.20"
 kotlinx-coroutines = "1.10.1"
 
 [plugins]
@@ -20,7 +20,7 @@ dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "da
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "2.1.10-1.0.31" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "2.1.20-1.0.31" }
 
 [libraries]
 android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.1.5"
