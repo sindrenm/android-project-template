@@ -3,13 +3,14 @@
   "extends": [
     "config:base"
   ],
-  "labels": ["libs"],
+  "labels": [
+    "libs"
+  ],
   "packageRules": [
     {
-      "groupName": "Kotlin, KSP and Compose Compiler",
+      "groupName": "Kotlin and KSP",
       "groupSlug": "kotlin",
       "matchPackageNames": [
-        "androidx.compose.compiler",
         "com.google.devtools.ksp",
         "org.jetbrains.kotlin"
       ]
@@ -23,16 +24,12 @@
       ]
     },
     {
-      "groupName": "Jetpack Compose",
-      "groupSlug": "compose",
-      "matchPackagePrefixes": [
-        "dev.chrisbanes.compose:compose-bom",
-        "com.google.accompanist"
-      ]
-    },
-    {
       "description": "Automatically merge minor and patch-level updates",
-      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
       "automerge": true,
       "automergeType": "pr",
       "platformAutomerge": true
