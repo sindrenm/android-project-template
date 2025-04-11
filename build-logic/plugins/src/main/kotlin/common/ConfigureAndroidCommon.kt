@@ -5,7 +5,7 @@ import com.android.build.api.dsl.CommonExtension
 private typealias CommonAndroidExtension = CommonExtension<*, *, *, *, *, *>
 
 fun CommonAndroidExtension.configureCommon() {
-  compileSdk = 35
+  compileSdk = 36
 
   defaultConfig {
     minSdk = 26
