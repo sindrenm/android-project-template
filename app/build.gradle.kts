@@ -1,5 +1,5 @@
 plugins {
-  alias(libs.plugins.convention.application)
+  alias(libs.plugins.convention.android.application)
   alias(libs.plugins.dagger.hilt.android)
   alias(libs.plugins.kotlin.ksp)
 }

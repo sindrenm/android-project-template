@@ -13,9 +13,9 @@ kotlinx-coroutines = "1.10.2"
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
-convention-application = { id = "convention.application" }
-convention-library-android = { id = "convention.library-android" }
-convention-library-jvm = { id = "convention.library-jvm" }
+convention-android-application = { id = "convention.android-application" }
+convention-android-library = { id = "convention.android-library" }
+convention-jvm-library = { id = "convention.jvm-library" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

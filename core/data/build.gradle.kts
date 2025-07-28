@@ -1,6 +1,3 @@
 plugins {
-  alias(libs.plugins.convention.library.jvm)
-}
-
-dependencies {
+  alias(libs.plugins.convention.jvm.library)
 }

@@ -22,3 +22,22 @@ private fun pluginCoordinates(pluginDependency: Provider<PluginDependency>): Pro
 
     "$id:$id.gradle.plugin:$version"
   }
+
+gradlePlugin {
+  plugins {
+    register("convention.android-application") {
+      id = "convention.android-application"
+      implementationClass = "AndroidApplicationConventionPlugin"
+    }
+
+    register("convention.android-library") {
+      id = "convention.android-library"
+      implementationClass = "AndroidLibraryConventionPlugin"
+    }
+
+    register("convention.jvm-library") {
+      id = "convention.jvm-library"
+      implementationClass = "JvmLibraryConventionPlugin"
+    }
+  }
+}
