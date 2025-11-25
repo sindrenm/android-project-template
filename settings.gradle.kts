@@ -27,4 +27,5 @@ rootProject.name = "Template"
 
 include(":app")
 include(":core:data")
+include(":core:navigation")
 include(":core:theme")
