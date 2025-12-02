@@ -1,6 +1,5 @@
 plugins {
   alias(libs.plugins.convention.android.application)
-  alias(libs.plugins.dagger.hilt.android)
   alias(libs.plugins.kotlin.ksp)
 }
 
@@ -32,7 +31,6 @@ dependencies {
   implementation(libs.androidx.compose.ui)
   implementation(libs.androidx.compose.ui.tooling.preview)
   implementation(libs.androidx.core)
-  implementation(libs.androidx.hilt.navigation.compose)
   implementation(libs.androidx.lifecycle.viewModel)
   implementation(libs.androidx.lifecycle.viewModel.compose)
   implementation(libs.androidx.navigation.compose)
@@ -41,16 +39,11 @@ dependencies {
   implementation(libs.arrow.core)
   implementation(libs.arrow.optics)
   implementation(libs.coil.compose)
-  implementation(libs.dagger.auto.android)
-  implementation(libs.dagger.hilt.runtime)
   implementation(libs.kotlinx.coroutines.core)
   implementation(platform(libs.androidx.compose.bom))
   implementation(projects.core.data)
   implementation(projects.core.navigation)
   implementation(projects.core.theme)
-  ksp(libs.androidx.hilt.compiler)
   ksp(libs.arrow.optics.ksp)
-  ksp(libs.dagger.auto.compiler)
-  ksp(libs.dagger.hilt.compiler)
   testImplementation(libs.kotlin.test)
 }

@@ -16,14 +16,6 @@
       ]
     },
     {
-      "groupName": "Dagger",
-      "groupSlug": "dagger",
-      "matchPackagePrefixes": [
-        "com.google.dagger",
-        "se.ansman.dagger.auto"
-      ]
-    },
-    {
       "description": "Automatically merge minor and patch-level updates",
       "matchUpdateTypes": [
         "minor",
