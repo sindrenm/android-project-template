@@ -13,6 +13,7 @@ android {
 }
 
 metro {
+  @Suppress("OPT_IN_USAGE")
   reportsDestination.set(layout.buildDirectory.dir("reports/metro"))
 }
 
