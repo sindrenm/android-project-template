@@ -1,6 +1,7 @@
 plugins {
   alias(libs.plugins.convention.android.application)
   alias(libs.plugins.kotlin.ksp)
+  alias(libs.plugins.metro)
 }
 
 android {
@@ -13,6 +14,10 @@ android {
   compileOptions {
     isCoreLibraryDesugaringEnabled = true
   }
+}
+
+metro {
+  reportsDestination.set(layout.buildDirectory.dir("reports/metro"))
 }
 
 dependencies {
@@ -40,6 +45,8 @@ dependencies {
   implementation(libs.arrow.optics)
   implementation(libs.coil.compose)
   implementation(libs.kotlinx.coroutines.core)
+  implementation(libs.metrox.android)
+  implementation(libs.metrox.viewmodel.compose)
   implementation(platform(libs.androidx.compose.bom))
   implementation(projects.core.data)
   implementation(projects.core.navigation)
