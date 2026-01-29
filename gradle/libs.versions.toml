@@ -2,7 +2,7 @@
 android-gradle-plugin = "8.13.2"
 androidx-activity = "1.12.2"
 androidx-lifecycle = "2.10.0"
-androidx-navigation = "2.9.6"
+androidx-navigation = "2.9.7"
 androidx-navigation3 = "1.0.0"
 arrow = "2.2.1.1"
 kotlin = "2.3.0"
