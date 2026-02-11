@@ -1,4 +1,4 @@
-package com.sindrenm.templates.project.features.home
+package com.sindrenm.templates.project.features.home.impl
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-  namespace = "com.sindrenm.templates.project.features.home"
+  namespace = "com.sindrenm.templates.project.features.home.impl"
 }
 
 dependencies {
@@ -15,7 +15,9 @@ dependencies {
   implementation(libs.androidx.compose.runtime)
   implementation(libs.androidx.compose.ui)
   implementation(libs.androidx.compose.ui.tooling.preview)
+  implementation(libs.androidx.navigation3.runtime)
   implementation(libs.metrox.viewmodel.compose)
   implementation(platform(libs.androidx.compose.bom))
   implementation(projects.core.theme)
+  implementation(projects.features.home.api)
 }

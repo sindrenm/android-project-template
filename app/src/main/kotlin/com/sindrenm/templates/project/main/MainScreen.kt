@@ -4,23 +4,17 @@ import androidx.compose.runtime.Composable
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
-import com.sindrenm.templates.project.core.navigation.NavKeys
-import com.sindrenm.templates.project.features.home.HomeScreen
-import com.sindrenm.templates.project.features.home.HomeViewModel
-import dev.zacsweers.metrox.viewmodel.metroViewModel
+import com.sindrenm.templates.project.features.home.api.HomeNavKey
+import com.sindrenm.templates.project.features.home.impl.homeScreenEntry
 
 @Composable
 internal fun MainScreen() {
-  val backStack = rememberNavBackStack(NavKeys.Home)
+  val backStack = rememberNavBackStack(HomeNavKey)
 
   NavDisplay(
     backStack = backStack,
     entryProvider = entryProvider {
-      entry<NavKeys.Home> {
-        val viewModel: HomeViewModel = metroViewModel()
-
-        HomeScreen(viewModel.uiState)
-      }
+      homeScreenEntry()
     },
   )
 }

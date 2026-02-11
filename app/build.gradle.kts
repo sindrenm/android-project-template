@@ -29,7 +29,7 @@ dependencies {
   implementation(libs.metrox.viewmodel.compose)
   implementation(platform(libs.androidx.compose.bom))
   implementation(projects.core.data)
-  implementation(projects.core.navigation)
   implementation(projects.core.theme)
-  implementation(projects.features.home)
+  implementation(projects.features.home.api)
+  implementation(projects.features.home.impl)
 }

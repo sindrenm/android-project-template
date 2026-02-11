@@ -31,6 +31,6 @@ rootProject.name = "Template"
 
 include(":app")
 include(":core:data")
-include(":core:navigation")
 include(":core:theme")
-include(":features:home")
+include(":features:home:api")
+include(":features:home:impl")
