@@ -8,7 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import com.sindrenm.templates.project.core.navigation.AppNavKey
+import com.sindrenm.templates.project.core.navigation.Navigator
 import com.sindrenm.templates.project.core.theme.TemplateTheme
+import com.sindrenm.templates.project.features.home.api.HomeNavKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -22,12 +24,15 @@ import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
 @ContributesIntoMap(AppScope::class, binding<Activity>())
 class MainActivity(
   private val metroViewModelFactory: MetroViewModelFactory,
+  private val navigator: Navigator,
   private val backStack: SnapshotStateList<AppNavKey>,
 ) : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     enableEdgeToEdge()
 
     super.onCreate(savedInstanceState)
+
+    intent.dataString?.let { navigator.populateFromDeepLink(it, startNavKey = HomeNavKey) }
 
     setContent {
       TemplateTheme {

@@ -1,6 +1,7 @@
 plugins {
   alias(libs.plugins.convention.jvm.library)
   alias(libs.plugins.kotlin.serialization)
+  alias(libs.plugins.metro)
 }
 
 dependencies {

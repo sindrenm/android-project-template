@@ -8,4 +8,3 @@ import kotlinx.serialization.Serializable
 object SettingsNavKey : AppNavKey {
   override val parent: AppNavKey = ProfileNavKey
 }
-
