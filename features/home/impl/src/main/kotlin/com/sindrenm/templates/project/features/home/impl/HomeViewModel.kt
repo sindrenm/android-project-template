@@ -4,8 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import androidx.navigation3.runtime.NavBackStack
-import com.sindrenm.templates.project.core.navigation.AppNavKey
+import com.sindrenm.templates.project.core.navigation.Navigator
 import com.sindrenm.templates.project.features.profile.api.ProfileNavKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
@@ -16,12 +15,12 @@ import dev.zacsweers.metrox.viewmodel.ViewModelKey
 @ViewModelKey(HomeViewModel::class)
 @ContributesIntoMap(AppScope::class)
 class HomeViewModel(
-  private val navBackStack: NavBackStack<AppNavKey>,
+  private val navigator: Navigator,
 ) : ViewModel() {
   var uiState: HomeUiState by mutableStateOf(HomeUiState)
     private set
 
   fun onProfileClicked() {
-    navBackStack.add(ProfileNavKey)
+    navigator.navigateTo(ProfileNavKey)
   }
 }

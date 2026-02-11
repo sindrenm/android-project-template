@@ -1,7 +1,9 @@
 package com.sindrenm.templates.project.di
 
-import androidx.navigation3.runtime.NavBackStack
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import com.sindrenm.templates.project.core.navigation.AppNavKey
+import com.sindrenm.templates.project.core.navigation.Navigator
 import com.sindrenm.templates.project.features.home.api.HomeNavKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.DependencyGraph
@@ -14,7 +16,13 @@ import dev.zacsweers.metrox.viewmodel.ViewModelGraph
 interface AppGraph : MetroAppComponentProviders, ViewModelGraph {
   @Provides
   @SingleIn(AppScope::class)
-  fun provideNavBackStack(): NavBackStack<AppNavKey> {
-    return NavBackStack(HomeNavKey)
+  fun provideNavBackStack(): SnapshotStateList<AppNavKey> {
+    return mutableStateListOf(HomeNavKey)
+  }
+
+  @Provides
+  @SingleIn(AppScope::class)
+  fun provideNavigator(backStack: SnapshotStateList<AppNavKey>): Navigator {
+    return Navigator(backStack)
   }
 }
