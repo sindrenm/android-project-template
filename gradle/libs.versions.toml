@@ -1,12 +1,8 @@
 [versions]
-android-gradle-plugin = "8.13.2"
+android-gradle-plugin = "9.0.0"
 androidx-activity = "1.12.3"
-androidx-lifecycle = "2.10.0"
-androidx-navigation = "2.9.7"
 androidx-navigation3 = "1.0.0"
-arrow = "2.2.1.1"
 kotlin = "2.3.10"
-kotlinx-coroutines = "1.10.2"
 kotlinx-serialization = "1.10.0"
 metro = "0.10.3"
 
@@ -16,7 +12,6 @@ android-library = { id = "com.android.library", version.ref = "android-gradle-pl
 convention-android-application = { id = "convention.android-application" }
 convention-android-library = { id = "convention.android-library" }
 convention-jvm-library = { id = "convention.jvm-library" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "2.3.5" }
@@ -24,7 +19,6 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 metro = { id = "dev.zacsweers.metro", version.ref = "metro" }
 
 [libraries]
-android-desugarJdkLibs = "com.android.tools:desugar_jdk_libs:2.1.5"
 androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-compose-animation = { module = "androidx.compose.animation:animation" }
@@ -35,22 +29,12 @@ androidx-compose-material-icons-extended = { module = "androidx.compose.material
 androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
 androidx-compose-runtime = { module = "androidx.compose.runtime:runtime" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui" }
-androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 androidx-core = "androidx.core:core-ktx:1.17.0"
-androidx-lifecycle-viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-viewModel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
-androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
 androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "androidx-navigation3" }
 androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "androidx-navigation3" }
-arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
-arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
-arrow-optics-ksp = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
-coil-compose = "io.coil-kt:coil-compose:2.7.0"
 google-material = "com.google.android.material:material:1.13.0"
-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinx-serialization" }
 metrox-android = { module = "dev.zacsweers.metro:metrox-android", version.ref = "metro" }
 metrox-viewmodel-compose = { module = "dev.zacsweers.metro:metrox-viewmodel-compose", version.ref = "metro" }

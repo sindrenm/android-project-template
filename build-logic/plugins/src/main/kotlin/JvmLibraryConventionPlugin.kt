@@ -12,8 +12,8 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
       configureKotlin()
     }
   }
+}
 
-  private fun Project.configureKotlin() {
-    extensions.getByType<KotlinJvmProjectExtension>().configureCommon()
-  }
+private fun Project.configureKotlin() {
+  extensions.getByType<KotlinJvmProjectExtension>().configureCommon()
 }

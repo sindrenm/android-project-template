@@ -2,12 +2,10 @@ package common
 
 import com.android.build.api.dsl.CommonExtension
 
-private typealias CommonAndroidExtension = CommonExtension<*, *, *, *, *, *>
-
-internal fun CommonAndroidExtension.configureCommon() {
+internal fun CommonExtension.configureCommon() {
   compileSdk = 36
 
-  defaultConfig {
+  defaultConfig.apply {
     minSdk = 28
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -17,7 +15,7 @@ internal fun CommonAndroidExtension.configureCommon() {
     }
   }
 
-  packaging {
+  packaging.apply {
     resources {
       excludes += "/META-INF/{AL2.0,LGPL2.1}"
     }

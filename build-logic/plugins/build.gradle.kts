@@ -7,7 +7,6 @@ group = "com.sindrenm.templates.project.build.plugins"
 dependencies {
   implementation(pluginCoordinates(libs.plugins.android.application))
   implementation(pluginCoordinates(libs.plugins.android.library))
-  implementation(pluginCoordinates(libs.plugins.kotlin.android))
   implementation(pluginCoordinates(libs.plugins.kotlin.compose))
   implementation(pluginCoordinates(libs.plugins.kotlin.jvm))
 
