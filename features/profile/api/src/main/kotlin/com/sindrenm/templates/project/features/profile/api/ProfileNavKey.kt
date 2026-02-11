@@ -1,7 +1,7 @@
 package com.sindrenm.templates.project.features.profile.api
 
-import androidx.navigation3.runtime.NavKey
+import com.sindrenm.templates.project.core.navigation.AppNavKey
 import kotlinx.serialization.Serializable
 
 @Serializable
-object ProfileNavKey : NavKey
+object ProfileNavKey : AppNavKey
