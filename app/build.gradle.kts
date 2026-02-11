@@ -32,4 +32,8 @@ dependencies {
   implementation(projects.core.theme)
   implementation(projects.features.home.api)
   implementation(projects.features.home.impl)
+  implementation(projects.features.profile.api)
+  implementation(projects.features.profile.impl)
+  implementation(projects.features.settings.api)
+  implementation(projects.features.settings.impl)
 }

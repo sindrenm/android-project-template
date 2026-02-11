@@ -6,6 +6,8 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.sindrenm.templates.project.features.home.api.HomeNavKey
 import com.sindrenm.templates.project.features.home.impl.homeScreenEntry
+import com.sindrenm.templates.project.features.profile.impl.profileScreenEntry
+import com.sindrenm.templates.project.features.settings.impl.settingsScreenEntry
 
 @Composable
 internal fun MainScreen() {
@@ -15,6 +17,8 @@ internal fun MainScreen() {
     backStack = backStack,
     entryProvider = entryProvider {
       homeScreenEntry()
+      profileScreenEntry()
+      settingsScreenEntry()
     },
   )
 }
