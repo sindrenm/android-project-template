@@ -21,7 +21,7 @@ class ProfileViewModel(
     private set
 
   fun onUpClicked() {
-    navigator.popBackStack()
+    navigator.navigateUp()
   }
 
   fun onSettingsClicked() {

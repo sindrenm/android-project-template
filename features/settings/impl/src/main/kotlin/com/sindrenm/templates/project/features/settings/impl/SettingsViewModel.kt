@@ -20,6 +20,6 @@ class SettingsViewModel(
     private set
 
   fun onUpClicked() {
-    navigator.popBackStack()
+    navigator.navigateUp()
   }
 }

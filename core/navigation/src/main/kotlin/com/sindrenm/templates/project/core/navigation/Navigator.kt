@@ -1,5 +1,6 @@
 package com.sindrenm.templates.project.core.navigation
 
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.Snapshot
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import dev.zacsweers.metro.AppScope
@@ -12,19 +13,16 @@ class Navigator(
   private val backStack: SnapshotStateList<AppNavKey>,
   private val deepLinkResolver: DeepLinkResolver,
 ) {
+  private var syntheticBackStack: SnapshotStateList<AppNavKey>? = null
+
   fun populateFromDeepLink(deepLink: String, startNavKey: AppNavKey) {
     val resolvedNavKey = deepLinkResolver.resolveDeepLink(deepLink) ?: return
 
     Snapshot.withMutableSnapshot {
+      syntheticBackStack = buildSyntheticBackStack(resolvedNavKey, startNavKey)
+
       backStack.clear()
-      var target: AppNavKey? = resolvedNavKey
-
-      while (target != null) {
-        backStack.add(0, target)
-        target = target.parent
-      }
-
-      backStack.add(0, startNavKey)
+      backStack.add(resolvedNavKey)
     }
   }
 
@@ -32,7 +30,31 @@ class Navigator(
     backStack.add(key)
   }
 
-  fun popBackStack() {
-    backStack.removeLastOrNull()
+  fun navigateUp() {
+    val synthetic = syntheticBackStack
+
+    if (synthetic == null) {
+      backStack.removeLastOrNull()
+    } else {
+      Snapshot.withMutableSnapshot {
+        backStack.clear()
+        backStack.addAll(synthetic.dropLast(1))
+        syntheticBackStack = null
+      }
+    }
   }
+}
+
+private fun buildSyntheticBackStack(target: AppNavKey, startNavKey: AppNavKey): SnapshotStateList<AppNavKey> {
+  val backStack = mutableStateListOf<AppNavKey>()
+  var current: AppNavKey? = target
+
+  while (current != null) {
+    backStack.add(0, current)
+    current = current.parent
+  }
+
+  backStack.add(0, startNavKey)
+
+  return backStack
 }
