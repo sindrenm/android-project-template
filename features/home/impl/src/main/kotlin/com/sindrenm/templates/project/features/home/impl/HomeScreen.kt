@@ -2,7 +2,11 @@ package com.sindrenm.templates.project.features.home.impl
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -14,10 +18,23 @@ import com.sindrenm.templates.project.core.theme.TemplateTheme
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
-fun HomeScreen(uiState: HomeUiState, modifier: Modifier = Modifier) {
+fun HomeScreen(
+  uiState: HomeUiState,
+  onProfileClicked: () -> Unit,
+  modifier: Modifier = Modifier,
+) {
   Scaffold(
     modifier = modifier,
-    topBar = { TopAppBar(title = { Text("Home") }) },
+    topBar = {
+      TopAppBar(
+        title = { Text("Home") },
+        actions = {
+          IconButton(onClick = onProfileClicked) {
+            Icon(Icons.Default.AccountCircle, contentDescription = "Profile")
+          }
+        },
+      )
+    },
   ) { contentPadding ->
     Box(
       modifier = Modifier
@@ -35,6 +52,7 @@ private fun HomeScreenPreview() {
   TemplateTheme {
     HomeScreen(
       uiState = HomeUiState,
+      onProfileClicked = {},
     )
   }
 }

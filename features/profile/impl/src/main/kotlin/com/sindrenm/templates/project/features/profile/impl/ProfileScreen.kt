@@ -2,7 +2,12 @@ package com.sindrenm.templates.project.features.profile.impl
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -14,10 +19,29 @@ import com.sindrenm.templates.project.core.theme.TemplateTheme
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
-fun ProfileScreen(uiState: ProfileUiState, modifier: Modifier = Modifier) {
+fun ProfileScreen(
+  uiState: ProfileUiState,
+  onUpClicked: () -> Unit,
+  onSettingsClicked: () -> Unit,
+  modifier: Modifier = Modifier,
+) {
   Scaffold(
     modifier = modifier,
-    topBar = { TopAppBar(title = { Text("Profile") }) },
+    topBar = {
+      TopAppBar(
+        navigationIcon = {
+          IconButton(onClick = onUpClicked) {
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Up")
+          }
+        },
+        title = { Text("Profile") },
+        actions = {
+          IconButton(onClick = onSettingsClicked) {
+            Icon(Icons.Default.Settings, contentDescription = "Settings")
+          }
+        },
+      )
+    },
   ) { contentPadding ->
     Box(
       modifier = Modifier
@@ -35,6 +59,8 @@ private fun ProfileScreenPreview() {
   TemplateTheme {
     ProfileScreen(
       uiState = ProfileUiState,
+      onUpClicked = {},
+      onSettingsClicked = {},
     )
   }
 }

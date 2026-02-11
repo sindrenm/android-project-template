@@ -6,6 +6,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.navigation3.runtime.NavBackStack
+import androidx.navigation3.runtime.NavKey
 import com.sindrenm.templates.project.core.theme.TemplateTheme
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
@@ -20,6 +22,7 @@ import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
 @ContributesIntoMap(AppScope::class, binding<Activity>())
 class MainActivity(
   private val metroViewModelFactory: MetroViewModelFactory,
+  private val navBackStack: NavBackStack<NavKey>,
 ) : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     enableEdgeToEdge()
@@ -29,7 +32,7 @@ class MainActivity(
     setContent {
       TemplateTheme {
         CompositionLocalProvider(LocalMetroViewModelFactory provides metroViewModelFactory) {
-          MainScreen()
+          MainScreen(navBackStack)
         }
       }
     }

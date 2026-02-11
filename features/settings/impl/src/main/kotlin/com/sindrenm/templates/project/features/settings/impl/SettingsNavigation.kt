@@ -1,5 +1,6 @@
 package com.sindrenm.templates.project.features.settings.impl
 
+import androidx.lifecycle.compose.dropUnlessResumed
 import androidx.navigation3.runtime.EntryProviderScope
 import androidx.navigation3.runtime.NavKey
 import com.sindrenm.templates.project.features.settings.api.SettingsNavKey
@@ -9,6 +10,9 @@ fun EntryProviderScope<NavKey>.settingsScreenEntry() {
   entry<SettingsNavKey> {
     val viewModel: SettingsViewModel = metroViewModel()
 
-    SettingsScreen(viewModel.uiState)
+    SettingsScreen(
+      uiState = viewModel.uiState,
+      onUpClicked = dropUnlessResumed { viewModel.onUpClicked() },
+    )
   }
 }
