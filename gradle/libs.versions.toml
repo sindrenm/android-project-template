@@ -1,7 +1,7 @@
 [versions]
 android-gradle-plugin = "9.0.0"
 androidx-activity = "1.12.3"
-androidx-navigation3 = "1.0.0"
+androidx-navigation3 = "1.0.1"
 kotlin = "2.3.10"
 kotlinx-serialization = "1.10.0"
 metro = "0.10.3"
