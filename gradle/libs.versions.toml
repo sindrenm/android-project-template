@@ -4,7 +4,7 @@ androidx-activity = "1.12.4"
 androidx-navigation3 = "1.0.1"
 kotlin = "2.3.10"
 kotlinx-serialization = "1.10.0"
-metro = "0.10.3"
+metro = "0.10.4"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
