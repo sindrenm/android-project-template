@@ -26,7 +26,7 @@ jobs:
           java-version: 21
 
       - name: Set up Android environment
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Lint Android source
         uses: gradle/gradle-build-action@v3
@@ -50,7 +50,7 @@ jobs:
           java-version: 21
 
       - name: Set up Android environment
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Run unit tests
         uses: gradle/gradle-build-action@v3
