@@ -12,7 +12,7 @@ import dev.zacsweers.metro.Inject
 import dev.zacsweers.metrox.viewmodel.ViewModelKey
 
 @Inject
-@ViewModelKey(ProfileViewModel::class)
+@ViewModelKey
 @ContributesIntoMap(AppScope::class)
 class ProfileViewModel(
   private val navigator: Navigator,
