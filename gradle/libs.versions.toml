@@ -14,7 +14,7 @@ convention-android-library = { id = "convention.android-library" }
 convention-jvm-library = { id = "convention.jvm-library" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "2.3.6" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.require = "2.3.7" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 metro = { id = "dev.zacsweers.metro", version.ref = "metro" }
 
