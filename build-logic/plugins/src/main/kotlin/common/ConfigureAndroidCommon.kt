@@ -3,7 +3,7 @@ package common
 import com.android.build.api.dsl.CommonExtension
 
 internal fun CommonExtension.configureCommon() {
-  compileSdk = 36
+  compileSdk = 37
 
   defaultConfig.apply {
     minSdk = 28
