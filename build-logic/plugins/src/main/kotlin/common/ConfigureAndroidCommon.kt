@@ -3,10 +3,14 @@ package common
 import com.android.build.api.dsl.CommonExtension
 
 internal fun CommonExtension.configureCommon() {
-  compileSdk = 37
+  compileSdk {
+    version = release(37)
+  }
 
   defaultConfig.apply {
-    minSdk = 28
+    minSdk {
+      version = release(28)
+    }
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 

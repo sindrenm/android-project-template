@@ -18,7 +18,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 }
 
 private fun Project.configureKotlin() {
-  extensions.configure<KotlinAndroidProjectExtension>() {
+  extensions.configure<KotlinAndroidProjectExtension> {
     configureCommon()
   }
 }
@@ -28,7 +28,9 @@ private fun Project.configureAndroid() {
     configureCommon()
 
     defaultConfig {
-      targetSdk = 36
+      targetSdk {
+         version = release(36)
+      }
 
       versionCode = 1
       versionName = "0.1.0"
