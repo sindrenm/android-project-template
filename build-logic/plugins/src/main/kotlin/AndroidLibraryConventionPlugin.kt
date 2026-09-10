@@ -18,7 +18,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 }
 
 private fun Project.configureKotlin() {
-  extensions.configure<KotlinAndroidProjectExtension>() {
+  extensions.configure<KotlinAndroidProjectExtension> {
     configureCommon()
   }
 }
